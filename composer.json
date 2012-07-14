@@ -1,6 +1,6 @@
 {
     "name": "frosas/base-url-bundle",
-    "description": "Sets a base URL. Required when the router is used when not dealing with a request (like in the console)",
+    "description": "This Symfony 2 bundle sets the router default base URL. It is required when the router is used while not dealing with a request (like in the console).",
     "authors": [
         {
             "name": "Francesc Rosàs",
