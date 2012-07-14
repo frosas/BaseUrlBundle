@@ -13,6 +13,6 @@
         "guzzle/guzzle": "2.7.*"
     },
     "autoload": {
-        "psr-0": { "Frosas\\BaseUrlBundle": "src" }
+        "psr-0": { "Frosas\\BaseUrlBundle": "" }
     }
 }
