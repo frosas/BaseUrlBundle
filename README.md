@@ -42,3 +42,26 @@ It is required when absolute URLs are generated while not dealing with a request
     parameters:
         base_url: http://example.com
     ```
+
+# Troubleshooting
+
+- *Controller tests fail when using generated URLs*
+
+    If you generate the URLs you test
+    
+    ```php
+    <?php
+    $client = self::createClient();
+    $profileUrl = $client->getContainer()->get('router')->generate('profile', array('id' => 123);
+    $client->request('get', $profileUrl);
+    ```
+
+    your tests can fail as the default Symfony test client expects the site to be in the root of the domain 
+    (like `http://example.com`). If your base URL has a path (like `http://localhost/~user/my-site`) you'll 
+    have to change it for you test environment.
+    
+    ```
+    # app/config/config_test.yml
+    frosas_base_url:
+        base_url: http://localhost
+    ```
