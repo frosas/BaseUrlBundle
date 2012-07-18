@@ -29,12 +29,16 @@ It is required when absolute URLs are generated while not dealing with a request
     );
     ```
 
-4. Set the base URL
+4. Set the base URL. This is the recommended usage:
 
-    ```
-    // app/config/config.yml
+    ``` 
+    # app/config/config.yml
     frosas_base_url:
+        base_url: %base_url%
+    ``` 
+
+    ``` 
+    # app/config/parameters.yml
+    parameters:
         base_url: http://example.com
     ```
-
-    Note: you probably want to set it into your `app/config/parameters.yml` and reference it from your config
