@@ -4,22 +4,13 @@ It is required when absolute URLs are generated while not dealing with a request
 
 # Installation and configuration
 
-1. Require it in your `composer.json`
-
-    ```js
-    "require": {
-        ...
-        "frosas/base-url-bundle": "*"
-    }
-    ```
-
-2. Download it
+1. Require it
 
     ```bash
-    $ php composer.phar update frosas/base-url-bundle
+    $ composer require frosas/base-url-bundle:1.*@dev
     ```
 
-3. Register it in `app/AppKernel.php`
+2. Register it in `app/AppKernel.php`
 
     ```php 
     <?php 
@@ -29,7 +20,7 @@ It is required when absolute URLs are generated while not dealing with a request
     );
     ```
 
-4. Set the base URL. This is the recommended usage:
+3. Set the base URL. This is the recommended usage:
 
     ``` 
     # app/config/config.yml
