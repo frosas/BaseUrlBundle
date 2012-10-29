@@ -13,7 +13,6 @@ It is required when absolute URLs are generated while not dealing with a request
 2. Register it in `app/AppKernel.php`
 
     ```php 
-    <?php 
     $bundles = array(
         // ...
         new Frosas\BaseUrlBundle\FrosasBaseUrlBundle
@@ -41,7 +40,6 @@ It is required when absolute URLs are generated while not dealing with a request
     If you generate the URLs you test
     
     ```php
-    <?php
     $client = self::createClient();
     $profileUrl = $client->getContainer()->get('router')->generate('profile', array('id' => 123);
     $client->request('get', $profileUrl);
