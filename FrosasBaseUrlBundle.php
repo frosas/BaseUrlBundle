@@ -3,7 +3,8 @@
 namespace Frosas\BaseUrlBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use Guzzle\Http\Url;
+use Symfony\Component\Routing\RequestContext;
+use Zend\Uri\Http;
 
 class FrosasBaseUrlBundle extends Bundle
 {
@@ -14,7 +15,8 @@ class FrosasBaseUrlBundle extends Bundle
 
     private function setRouterBaseUrl($baseUrl)
     {
-        $baseUrl = Url::factory($baseUrl);
+        $baseUrl = new Http($baseUrl);
+        /** @var $context RequestContext */
         $context = $this->container->get('router')->getContext();
         $context->setScheme($baseUrl->getScheme());
         $context->setHost($baseUrl->getHost());
