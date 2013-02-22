@@ -6,7 +6,7 @@
     "authors": [{"name": "Francesc Rosàs", "email": "francescrosasbosque@gmail.com"}],
     "require": {
         "symfony/symfony": "2.1.*",
-        "zendframework/zendframework": "~2.0"
+        "zendframework/zend-uri": "~2.0"
     },
     "autoload": {"psr-0": { "Frosas\\BaseUrlBundle": "" }},
     "target-dir": "Frosas/BaseUrlBundle",
