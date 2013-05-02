@@ -1,3 +1,7 @@
+**Notice [this functionality is already available in Symfony](http://symfony.com/doc/current/cookbook/console/sending_emails.html) since version 2.1**
+
+---
+
 This Symfony2 bundle **sets the router default base URL** (which by default is `http://localhost`)
 
 It is required when absolute URLs are generated while not dealing with a request (like when sending an email from a cron job).
